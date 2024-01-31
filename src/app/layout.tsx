@@ -22,11 +22,12 @@ export default function RootLayout({ children }: LayoutProps) {
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop
                   offset="0%"
-                  style={{ stopColor: '#59453c', stopOpacity: '1' }}
+                  style={{ stopColor: '#2A7A96', stopOpacity: '1' }}
                 />
+
                 <stop
                   offset="100%"
-                  style={{ stopColor: '#8f3a09', stopOpacity: '1' }}
+                  style={{ stopColor: '#7EC4D8', stopOpacity: '1' }}
                 />
               </linearGradient>
             </defs>
