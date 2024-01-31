@@ -19,12 +19,12 @@ const Header = () => {
       <nav>
         <ul className="list-none mr-36 p-0 gap-4 flex text-xl">
           <li>
-            <Link className="link" href="/meals">
+            <Link className="link hover:nav-link" href="/meals">
               Choose meal...
             </Link>
           </li>
           <li>
-            <Link className="link" href="/community">
+            <Link className="link hover:nav-link" href="/community">
               Monkfish Foodies
             </Link>
           </li>
