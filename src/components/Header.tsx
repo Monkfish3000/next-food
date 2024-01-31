@@ -4,20 +4,27 @@ import logo from '@/assets/logo.jpg';
 
 const Header = () => {
   return (
-    <header>
-      <Link href="/">
+    <header className="flex justify-between items-center py-12 px-10 md:py-8 md:px-10">
+      <Link
+        className="flex items-center justify-center gap-8 font-bold uppercase text-2xl text-custom-gray"
+        href="/"
+      >
         <img
           src={logo.src}
           alt="A plate with all the delicious Monkfish food"
         />
       </Link>
       <nav>
-        <ul>
+        <ul className="list-none m-0 p-0 flex gap-6 text-xl">
           <li>
-            <Link href="/meals">Choose meal...</Link>
+            <Link className="link" href="/meals">
+              Choose meal...
+            </Link>
           </li>
           <li>
-            <Link href="/community">Monkfish Foodies</Link>
+            <Link className="link" href="/community">
+              Monkfish Foodies
+            </Link>
           </li>
         </ul>
       </nav>
