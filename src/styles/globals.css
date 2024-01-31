@@ -29,6 +29,18 @@ body {
   text-decoration: none;
 }
 
+@layer components {
+  .nav-link {
+    @apply hover:text-transparent;
+
+    background: linear-gradient(90deg, #ff8a05, #f9b331);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
+  }
+}
+
 .header-background {
   position: absolute;
   width: 100%;
