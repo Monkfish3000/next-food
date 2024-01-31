@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
-import './globals.css';
+import '../styles/globals.css';
+import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Monkfish Food',
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps) {
             ></path>
           </svg>
         </div>
-
+        <Header />
         {children}
       </body>
     </html>
