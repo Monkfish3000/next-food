@@ -17,6 +17,10 @@ body {
   background: radial-gradient(#282c34, #282c34);
 }
 
+.custom-gradient {
+  background: linear-gradient(90deg, #f9572a, #ff9b05);
+}
+
 @layer components {
   .list-none {
     list-style: none;
@@ -27,6 +31,14 @@ body {
   @apply font-bold py-2 px-4 rounded-md;
   color: theme('colors.customGray');
   text-decoration: none;
+}
+
+.hero-link {
+  @apply mt-4 inline-block py-2 px-4 rounded-md text-white font-bold;
+}
+
+.home-page-section {
+  @apply flex flex-col mx-auto my-8 text-center text-3xl max-w-[50rem] w-[90%] text-customGray;
 }
 
 @layer components {
