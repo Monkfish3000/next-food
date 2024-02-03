@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import logo from '@/assets/logo.jpg';
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -9,10 +10,11 @@ const Header = () => {
         className="flex items-center justify-center gap-8 font-bold uppercase text-2xl text-customGray"
         href="/"
       >
-        <img
-          className="h-48 rounded-full"
-          src={logo.src}
+        <Image
+          className="h-36 w-36 rounded-full drop-shadow-2xl"
+          src={logo}
           alt="A plate with all the delicious Monkfish food"
+          priority
         />
         MonkFish Food
       </Link>
