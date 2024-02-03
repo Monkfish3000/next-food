@@ -19,6 +19,9 @@ const config: Config = {
       fontFamily: {
         montserrat: ["'Montserrat'", 'sans-serif'],
       },
+      maxWidth: {
+        custom: '75rem',
+      },
     },
   },
   plugins: [],
