@@ -17,7 +17,7 @@ const config: Config = {
         customGray: '#ddd6cb',
       },
       fontFamily: {
-        montserrat: ["'Montserrat'", 'sans-serif'],
+        sans: ["'Montserrat'", 'sans-serif'],
       },
       maxWidth: {
         custom: '75rem',
