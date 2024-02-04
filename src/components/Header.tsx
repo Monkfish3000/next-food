@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import NavLink from './NavLink';
 import logo from '@/assets/logo.jpg';
 import Image from 'next/image';
 import HeaderBackground from './HeaderBackground';
@@ -24,14 +25,10 @@ const Header = () => {
         <nav>
           <ul className="list-none mr-36 p-0 gap-4 flex text-xl">
             <li>
-              <Link className="link hover:nav-link" href="/meals">
-                Choose meal...
-              </Link>
+              <NavLink pathName={'meals'} text={'Choose meal...'} />
             </li>
             <li>
-              <Link className="link hover:nav-link" href="/community">
-                Monkfish Foodies
-              </Link>
+              <NavLink pathName={'community'} text={'Monkfish Foodies'} />
             </li>
           </ul>
         </nav>
