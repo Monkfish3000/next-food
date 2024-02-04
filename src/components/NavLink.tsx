@@ -13,7 +13,7 @@ const NavLink = ({ pathName, text }: NavLinkProps) => {
   return (
     <Link
       className={`link hover:nav-link ${
-        path.startsWith(`/${pathName}`) ? 'nav-link' : ''
+        path.startsWith(`/${pathName}`) ? 'nav-link nav-link-active' : ''
       }`}
       href={`/${pathName}`}
     >
