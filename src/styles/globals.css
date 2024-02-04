@@ -54,6 +54,10 @@ body {
   }
 }
 
+.nav-link-active {
+  font-weight: bolder;
+}
+
 .header-background {
   position: absolute;
   width: 100%;
