@@ -9,7 +9,7 @@ export default async function Meals() {
   return (
     <>
       <header className={styles.header}>
-        <h1>
+        <h1 className="text-5xl mb-5">
           Delicious Monkfish themed recipes, created{' '}
           <span className={styles.highlight}>by you</span>
         </h1>
