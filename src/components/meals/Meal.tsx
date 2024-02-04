@@ -12,6 +12,7 @@ interface MealProps {
 }
 
 const Meal = ({ title, slug, image, summary, creator }: MealProps) => {
+  console.log(image);
   return (
     <article className={styles.meal}>
       <header>
