@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Head from 'next/head';
 
 import '../styles/globals.css';
 import Header from '@/components/Header';
@@ -14,11 +15,15 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <>
+      <Head>
+        <title>Monkfish Food</title>
+        <meta name="description" content="All Monkfish restaurant." />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Header />
+      {children}
+    </>
   );
 }
