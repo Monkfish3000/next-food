@@ -19,6 +19,9 @@ const config: Config = {
       maxWidth: {
         custom: '75rem',
       },
+      fontFamily: {
+        body: ['"Protest Riot"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
