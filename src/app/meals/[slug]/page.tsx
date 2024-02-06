@@ -3,21 +3,31 @@ import Image from 'next/image';
 
 import styles from './page.module.css';
 
-export default function MealDetails({ params }) {
+interface MealDetailsParams {
+  params: {
+    slug: string;
+  };
+}
+
+export default function MealDetails({ params }: MealDetailsParams) {
   const meal = getMeal(params.slug);
+
+  let { image, title, creator, creator_email, summary, instructions } = meal;
+
+  instructions = instructions.replace(/\n/g, '<br/>');
 
   return (
     <>
       <header className={styles.header}>
         <div className={styles.image}>
-          <Image fill />
+          <Image src={image} alt={title} fill />
         </div>
         <div className={styles.headerText}>
-          <h1>{meal.title}</h1>
+          <h1>{title}</h1>
           <p className={styles.creator}>
-            by <a href={`mailto:${'EMAIL'}`}>NAME</a>
+            by <a href={`mailto:${creator_email}`}>{creator}</a>
           </p>
-          <p className={styles.summary}>Summary</p>
+          <p className={styles.summary}>{summary}</p>
         </div>
       </header>
       ;
@@ -25,7 +35,7 @@ export default function MealDetails({ params }) {
         <p
           className={styles.instructions}
           dangerouslySetInnerHTML={{
-            __html: '...',
+            __html: instructions,
           }}
         ></p>
       </main>

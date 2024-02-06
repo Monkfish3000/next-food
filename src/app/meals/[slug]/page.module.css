@@ -21,7 +21,6 @@
 
 .headerText {
   padding: 0.5rem 1rem 0 1rem;
-  color: #ddd6cb;
   max-width: 40rem;
   animation: fade-slide-in-from-right 1s ease-out forwards;
 }
@@ -30,13 +29,11 @@
   margin: 0;
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
 .creator {
   font-size: 1.5rem;
-  color: #cfa69b;
   font-style: italic;
 }
 
@@ -63,8 +60,8 @@
 .instructions {
   font-size: 1.25rem;
   line-height: 1.5;
-  background-color: #6e6464;
-  color: #13120f;
+  background-color: #2a7a96;
+  color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
   padding: 2rem;
