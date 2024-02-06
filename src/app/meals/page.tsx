@@ -17,7 +17,12 @@ export default function MealsPage() {
       <header className={styles.header}>
         <h1 className="text-5xl mb-5">
           Delicious Monkfish themed recipes, created{' '}
-          <span className={styles.highlight}>by you</span>
+          <span
+            style={{ display: 'inline-block' }}
+            className={styles.highlight}
+          >
+            by you
+          </span>
         </h1>
         <p>
           Browse the recipes, choose your favourites and cook away! Super easy!
