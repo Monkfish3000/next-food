@@ -11,6 +11,10 @@ async function Meals() {
   return <MealsGrid meals={meals} />;
 }
 
+const Loading = () => {
+  return <p className={styles.loading}>Fetching your meals</p>;
+};
+
 export default function MealsPage() {
   return (
     <>
@@ -33,7 +37,7 @@ export default function MealsPage() {
         </p>
       </header>
       <main className={styles.main}>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <Meals />
         </Suspense>
       </main>
