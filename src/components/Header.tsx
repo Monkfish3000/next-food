@@ -11,7 +11,7 @@ const Header = () => {
       <HeaderBackground />
       <header className="flex justify-between items-center py-12 px-10 md:py-8 md:px-10">
         <Link
-          className="flex items-center justify-center gap-8 uppercase text-3xl text-customGray"
+          className="flex items-center justify-center gap-8 uppercase text-3xl text-white"
           href="/"
         >
           <Image
