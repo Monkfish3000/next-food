@@ -2,6 +2,7 @@ import { getMeal } from '../../../../lib/meals';
 import Image from 'next/image';
 
 import styles from './page.module.css';
+import { notFound } from 'next/navigation';
 
 interface MealDetailsParams {
   params: {
@@ -11,6 +12,8 @@ interface MealDetailsParams {
 
 export default function MealDetails({ params }: MealDetailsParams) {
   const meal = getMeal(params.slug);
+
+  if (!meal) notFound();
 
   let { image, title, creator, creator_email, summary, instructions } = meal;
 
