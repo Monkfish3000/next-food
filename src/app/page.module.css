@@ -12,7 +12,7 @@
 }
 
 .hero {
-  color: #ddd6cb;
+  color: #333333;
   font-size: 1.5rem;
 }
 
@@ -64,7 +64,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  color: #ddd6cb;
+  color: #333333;
   font-size: 1.5rem;
   max-width: 50rem;
   width: 90%;
