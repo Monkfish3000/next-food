@@ -1,9 +1,44 @@
+import { getMeal } from '../../../../lib/meals';
 import Image from 'next/image';
 
-export default function MealDetails({ params }) {
+import styles from './page.module.css';
+
+interface MealDetailsParams {
+  params: {
+    slug: string;
+  };
+}
+
+export default function MealDetails({ params }: MealDetailsParams) {
+  const meal = getMeal(params.slug);
+
+  let { image, title, creator, creator_email, summary, instructions } = meal;
+
+  instructions = instructions.replace(/\n/g, '<br/>');
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>{params.slug}</p>
-    </main>
+    <>
+      <header className={styles.header}>
+        <div className={styles.image}>
+          <Image src={image} alt={title} fill />
+        </div>
+        <div className={styles.headerText}>
+          <h1>{title}</h1>
+          <p className={styles.creator}>
+            by <a href={`mailto:${creator_email}`}>{creator}</a>
+          </p>
+          <p className={styles.summary}>{summary}</p>
+        </div>
+      </header>
+      ;
+      <main className={styles.main}>
+        <p
+          className={styles.instructions}
+          dangerouslySetInnerHTML={{
+            __html: instructions,
+          }}
+        ></p>
+      </main>
+    </>
   );
 }
