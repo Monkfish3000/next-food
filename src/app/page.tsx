@@ -10,7 +10,7 @@ export default function Home() {
         <div className={styles.slideshow}>
           <ImageSlideshow />
         </div>
-        <div>
+        <div className="flex flex-col space-y-14">
           <div className={styles.hero}>
             <h1>MonkFish Food Love Monkfish Foodies</h1>
             <p>Tasting and sharing all the different food</p>
