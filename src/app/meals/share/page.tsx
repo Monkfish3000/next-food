@@ -1,23 +1,28 @@
+'use client';
+
+import { useFormState } from 'react-dom';
+
 import ImagePicker from '@/components/meals/ImagePicker';
-import classes from './page.module.css';
+import styles from './page.module.css';
 
 import { uploadNewMeal } from '../../../../lib/actions';
 import MealsSubmitBtn from '@/components/meals/MealSubmitBtn';
 
 export default function ShareMealPage() {
+  const [state, formAction] = useFormState(uploadNewMeal, { message: null });
   const numRows = 10;
 
   return (
     <>
-      <header className={classes.header}>
+      <header className={styles.header}>
         <h1>
-          Share your <span className={classes.highlight}>favorite meal</span>
+          Share your <span className={styles.highlight}>favorite meal</span>
         </h1>
         <p>Or any other meal you feel needs sharing!</p>
       </header>
-      <main className={classes.main}>
-        <form className={classes.form} action={uploadNewMeal}>
-          <div className={classes.row}>
+      <main className={styles.main}>
+        <form className={styles.form} action={formAction}>
+          <div className={styles.row}>
             <p>
               <label htmlFor="name">Your name</label>
               <input type="text" id="name" name="name" required />
@@ -45,7 +50,8 @@ export default function ShareMealPage() {
             ></textarea>
           </p>
           <ImagePicker label="Your image" name="image" />
-          <p className={classes.actions}>
+          {state?.message && <p className={styles.error}>{state.message}</p>}
+          <p className={styles.actions}>
             <MealsSubmitBtn />
           </p>
         </form>
