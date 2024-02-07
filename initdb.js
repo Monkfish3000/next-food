@@ -5,7 +5,7 @@ const dummyMeals = [
   {
     title: 'Juicy Monkfish Burger',
     slug: 'monkfish-burger',
-    image: '/images/burger.jpg',
+    image: 'burger.jpg',
     summary:
       'A mouth-watering burger featuring a juicy monkfish patty, perfectly seasoned and served in a soft bun.',
     instructions: `
@@ -27,7 +27,7 @@ const dummyMeals = [
   {
     title: 'Spicy Monkfish Curry',
     slug: 'spicy-curry',
-    image: '/images/curry.jpg',
+    image: 'curry.jpg',
     summary:
       'A rich and spicy monkfish curry, infused with exotic spices and creamy coconut milk, perfect for a comforting meal.',
     instructions: `
@@ -52,7 +52,7 @@ const dummyMeals = [
   {
     title: 'Monkfish Omelette',
     slug: 'monkfish-omelette',
-    image: '/images/dumplings.jpg',
+    image: 'omelette.jpg',
     summary:
       'A fluffy omelette filled with tender monkfish pieces, herbs, and cheese, perfect for a protein-packed breakfast or brunch.',
     instructions: `
@@ -74,7 +74,7 @@ const dummyMeals = [
   {
     title: 'Monkfish n Chips',
     slug: 'classic-monkfish-n-chips',
-    image: '/images/macncheese.jpg',
+    image: 'monkfishandchips.jpg',
     summary:
       'A British classic reimagined with monkfish, served with crispy golden chips and a side of tartar sauce.',
     instructions: `
@@ -96,7 +96,7 @@ const dummyMeals = [
   {
     title: 'Monkfish Pizza',
     slug: 'monkfish-pizza',
-    image: '/images/pizza.jpg',
+    image: 'pizza.jpg',
     summary:
       'A unique pizza with tender monkfish pieces, a blend of cheeses, and fresh toppings, baked to perfection on a crispy crust.',
     instructions: `
@@ -121,7 +121,7 @@ const dummyMeals = [
   {
     title: 'Monkfish Steak',
     slug: 'wiener-schnitzel',
-    image: '/images/schnitzel.jpg',
+    image: 'steak.jpg',
     summary:
       'A perfectly grilled monkfish steak, seasoned with herbs and spices, served with a side of roasted vegetables.',
     instructions: `
@@ -143,7 +143,7 @@ const dummyMeals = [
   {
     title: 'Fresh Monkfish Salad',
     slug: 'fresh-tomato-salad',
-    image: '/images/tomato-salad.jpg',
+    image: 'monkfish-salad.jpg',
     summary:
       'A refreshing salad with grilled monkfish, mixed greens, ripe tomatoes, and a zesty lemon vinaigrette dressing.',
     instructions: `

@@ -17,13 +17,15 @@ export default function MealDetails({ params }: MealDetailsParams) {
 
   let { image, title, creator, creator_email, summary, instructions } = meal;
 
+  const imgUrl = `https://monkfish-next-food-bucker.s3.eu-central-1.amazonaws.com/${image}`;
+
   instructions = instructions.replace(/\n/g, '<br/>');
 
   return (
     <>
       <header className={styles.header}>
         <div className={styles.image}>
-          <Image src={image} alt={title} fill />
+          <Image src={imgUrl} alt={title} fill />
         </div>
         <div className={styles.headerText}>
           <h1>{title}</h1>
