@@ -9,7 +9,9 @@ import { uploadNewMeal } from '../../../../lib/actions';
 import MealsSubmitBtn from '@/components/meals/MealSubmitBtn';
 
 export default function ShareMealPage() {
-  const [state, formAction] = useFormState(uploadNewMeal, { message: null });
+  const [state, formAction] = useFormState(uploadNewMeal, {
+    message: '',
+  });
   const numRows = 10;
 
   return (
