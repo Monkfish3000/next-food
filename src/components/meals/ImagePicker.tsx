@@ -1,19 +1,24 @@
 'use client';
-import { useRef, useState } from 'react';
+import { ChangeEvent, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import styles from './imagepicker.module.css';
 
-const ImagePicker = ({ label, name }) => {
-  const [chosenImage, setChosenImage] = useState();
+interface ImagePickerProps {
+  label: string;
+  name: string;
+}
+
+const ImagePicker = ({ label, name }: ImagePickerProps) => {
+  const [chosenImage, setChosenImage] = useState<string | null>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleBtnClick = () => {
     imgRef.current && imgRef.current.click();
   };
 
-  const handleImgChange = (event) => {
-    const file = event.target.files[0];
+  const handleImgChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files ? event.target.files[0] : null;
 
     if (!file) {
       setChosenImage(null);
@@ -23,7 +28,7 @@ const ImagePicker = ({ label, name }) => {
     const fileReader = new FileReader();
 
     fileReader.onload = () => {
-      setChosenImage(fileReader.result);
+      setChosenImage(fileReader.result as string);
     };
 
     fileReader.readAsDataURL(file);
@@ -44,7 +49,7 @@ const ImagePicker = ({ label, name }) => {
           className={styles.input}
           type="file"
           id={name}
-          accept="image/png image/jpg"
+          accept="image/png, image/jpg"
           name={name}
           onChange={handleImgChange}
           required
