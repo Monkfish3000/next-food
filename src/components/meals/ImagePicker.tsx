@@ -11,7 +11,7 @@ interface ImagePickerProps {
 
 const ImagePicker = ({ label, name }: ImagePickerProps) => {
   const [chosenImage, setChosenImage] = useState<string | null>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef<HTMLInputElement>(null);
 
   const handleBtnClick = () => {
     imgRef.current && imgRef.current.click();
