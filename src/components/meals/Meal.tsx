@@ -13,11 +13,14 @@ interface MealProps {
 
 const Meal = ({ title, slug, image, summary, creator }: MealProps) => {
   console.log(image);
+
+  const imgUrl = `https://monkfish-next-food-bucker.s3.eu-central-1.amazonaws.com/${image}`;
+
   return (
     <article className={styles.meal}>
       <header>
         <div className={styles.image}>
-          <Image src={image} alt={title} fill />
+          <Image src={imgUrl} alt={title} fill />
         </div>
         <div className={styles.headerText}>
           <h2>{title}</h2>
