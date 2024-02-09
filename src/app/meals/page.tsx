@@ -8,6 +8,8 @@ import { getMeals } from '../../../lib/meals';
 async function Meals() {
   const meals = await getMeals();
 
+  console.log('these are the meals > ', meals);
+
   return <MealsGrid meals={meals} />;
 }
 
