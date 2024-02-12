@@ -10,8 +10,10 @@ interface MealDetailsParams {
   };
 }
 
-export default function MealDetails({ params }: MealDetailsParams) {
-  const meal = getMeal(params.slug);
+export default async function MealDetails({ params }: MealDetailsParams) {
+  const meal = await getMeal(params.slug);
+
+  console.log('in the meals/slug page > ' + meal);
 
   if (!meal) notFound();
 
