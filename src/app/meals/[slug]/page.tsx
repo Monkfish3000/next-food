@@ -13,8 +13,6 @@ interface MealDetailsParams {
 export default async function MealDetails({ params }: MealDetailsParams) {
   const meal = await getMeal(params.slug);
 
-  console.log('in the meals/slug page > ' + meal);
-
   if (!meal) notFound();
 
   let { image, title, creator, creator_email, summary, instructions } = meal;

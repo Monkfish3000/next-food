@@ -27,19 +27,6 @@ export default function Home() {
       </header>
       <main>
         <section className={styles.section}>
-          <h2>How it works</h2>
-          <p>
-            Monkfish Food is a culinary haven where enthusiasts swap their top
-            meal secrets. It is a treasure trove for uncovering new flavors, and
-            a hub for mingling with fellow gastronomy aficionados.
-          </p>
-          <p>
-            Monkfish Food is a place to discover new dishes, and to connect with
-            other food lovers.
-          </p>
-        </section>
-
-        <section className={styles.section}>
           <h2>Why Monkfish Food?</h2>
           <p>
             Monkfish Food is a culinary haven where enthusiasts swap their top
